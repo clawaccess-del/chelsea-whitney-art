@@ -3,21 +3,742 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chelsea Whitney Art</title>
-  <meta name="description" content="Photography, graphic design, and digital art in the Rogue Valley, Oregon." />
+  <title>Chelsea Whitney Art | Rogue Valley Photography and Art</title>
+  <meta name="description" content="Chelsea Whitney Art offers photography, digital art, and visual design rooted in the natural beauty and creative spirit of the Rogue Valley, Oregon." />
+  <meta name="theme-color" content="#101522" />
   <style>
-    :root { color-scheme: light; }
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #faf7f4; color: #1f1a17; }
-    main { max-width: 760px; margin: 0 auto; padding: 72px 24px; }
-    h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    p { font-size: 1.125rem; line-height: 1.6; }
+    :root {
+      color-scheme: light;
+      --bg: #f6f0ea;
+      --surface: rgba(255, 255, 255, 0.72);
+      --surface-strong: rgba(255, 255, 255, 0.9);
+      --ink: #1e2430;
+      --muted: #5f6673;
+      --line: rgba(24, 31, 45, 0.12);
+      --deep: #101522;
+      --accent: #c764a0;
+      --accent-2: #6c88d6;
+      --gold: #efc86f;
+      --shadow: 0 24px 60px rgba(16, 21, 34, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --wrap: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(108, 136, 214, 0.2), transparent 30%),
+        radial-gradient(circle at top right, rgba(199, 100, 160, 0.18), transparent 32%),
+        linear-gradient(180deg, #edf5ff 0%, #f7efe6 28%, #f6f0ea 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrap { width: min(var(--wrap), calc(100% - 32px)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(246, 240, 234, 0.72);
+      border-bottom: 1px solid rgba(24, 31, 45, 0.08);
+    }
+
+    .site-header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 0.95rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--deep);
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 84px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-art,
+    .panel,
+    .feature,
+    .quote,
+    .cta {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-copy {
+      border-radius: var(--radius-xl);
+      padding: 44px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 40px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.7;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 0.95;
+      margin-bottom: 20px;
+      letter-spacing: -0.05em;
+      color: var(--deep);
+    }
+
+    .hero-copy p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 58ch;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .button {
+      background: linear-gradient(135deg, var(--deep), #27324c);
+      color: white;
+    }
+
+    .button-secondary {
+      background: rgba(16, 21, 34, 0.06);
+      color: var(--deep);
+      border: 1px solid rgba(16, 21, 34, 0.08);
+    }
+
+    .button:hover,
+    .button-secondary:hover { transform: translateY(-1px); }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.54);
+      border: 1px solid rgba(16, 21, 34, 0.06);
+      border-radius: var(--radius-md);
+      padding: 14px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--deep);
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 4px;
+    }
+
+    .hero-art {
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr 0.78fr;
+      gap: 18px;
+      min-height: 100%;
+    }
+
+    .art-main,
+    .art-stack > div,
+    .portfolio-card,
+    .design-card,
+    .quote {
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .art-main {
+      min-height: 560px;
+      background:
+        linear-gradient(180deg, rgba(9, 18, 40, 0.1), rgba(9, 18, 40, 0.68)),
+        linear-gradient(180deg, #96bff5 0%, #cfe0f7 46%, #efc86f 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 26px;
+    }
+
+    .art-main::before {
+      content: "Wildlife and story-driven imagery";
+      position: absolute;
+      inset: 18px auto auto 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      color: white;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+    }
+
+    .art-main-text {
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    .art-main-text strong {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .art-main-text span {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.95rem;
+    }
+
+    .art-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .art-stack > div {
+      min-height: 271px;
+      padding: 22px;
+      display: flex;
+      align-items: flex-end;
+      color: white;
+    }
+
+    .art-stack .macro {
+      background:
+        linear-gradient(180deg, rgba(46, 6, 54, 0.04), rgba(46, 6, 54, 0.72)),
+        linear-gradient(135deg, #fff4c9 0%, #f5cce0 40%, #d14ba2 100%);
+    }
+
+    .art-stack .digital {
+      background:
+        linear-gradient(180deg, rgba(4, 10, 28, 0.06), rgba(4, 10, 28, 0.78)),
+        radial-gradient(circle at top, rgba(255,255,255,0.3), transparent 22%),
+        linear-gradient(135deg, #18345c 0%, #4c75cf 42%, #ce5ba0 100%);
+    }
+
+    section { padding: 42px 0; }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 3.4vw, 3.2rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--deep);
+      margin-bottom: 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-size: 1.05rem;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .design-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature {
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+
+    .feature h3,
+    .portfolio-card h3,
+    .design-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      color: var(--deep);
+    }
+
+    .feature p,
+    .portfolio-card p,
+    .design-card p,
+    .cta p,
+    .quote p {
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(108, 136, 214, 0.12);
+      color: var(--accent-2);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+    }
+
+    .portfolio-card,
+    .design-card {
+      min-height: 330px;
+      padding: 26px;
+      display: flex;
+      align-items: flex-end;
+      background: var(--surface-strong);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .portfolio-card::before,
+    .design-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 21, 34, 0.04), rgba(16, 21, 34, 0.74));
+    }
+
+    .portfolio-card > div,
+    .design-card > div {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+    .portfolio-card h3,
+    .design-card h3,
+    .portfolio-card p,
+    .design-card p { color: white; }
+
+    .portfolio-card.wildlife {
+      background:
+        linear-gradient(135deg, rgba(150, 191, 245, 0.95), rgba(44, 64, 112, 0.9)),
+        linear-gradient(180deg, #9dc1f3, #203359);
+    }
+
+    .portfolio-card.macro {
+      background:
+        linear-gradient(135deg, rgba(255, 249, 197, 0.94), rgba(211, 64, 143, 0.88));
+    }
+
+    .portfolio-card.portrait {
+      background:
+        linear-gradient(135deg, rgba(255, 224, 201, 0.96), rgba(152, 76, 88, 0.9));
+    }
+
+    .design-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .design-card.composite {
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.24), transparent 24%),
+        linear-gradient(135deg, rgba(22, 40, 72, 0.98), rgba(85, 122, 220, 0.9) 45%, rgba(207, 89, 165, 0.96));
+    }
+
+    .design-card.branding {
+      background:
+        linear-gradient(135deg, rgba(34, 33, 65, 0.95), rgba(230, 122, 89, 0.84));
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+    }
+
+    .panel,
+    .quote,
+    .cta {
+      border-radius: var(--radius-lg);
+      padding: 30px;
+    }
+
+    .panel ul {
+      padding-left: 18px;
+      margin: 18px 0 0;
+      color: var(--muted);
+    }
+
+    .panel li + li { margin-top: 10px; }
+
+    .quote {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.55)),
+        radial-gradient(circle at top right, rgba(239, 200, 111, 0.25), transparent 34%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .quote strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--deep);
+    }
+
+    .cta {
+      margin: 42px 0 70px;
+      background: linear-gradient(135deg, rgba(16, 21, 34, 0.96), rgba(39, 50, 76, 0.96));
+      color: white;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .cta h2,
+    .cta p { color: white; }
+
+    .cta-card {
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .site-footer {
+      padding: 0 0 42px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-heading,
+      .services-grid,
+      .portfolio-grid,
+      .design-grid,
+      .about-grid,
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        grid-template-columns: 1fr;
+      }
+
+      .art-main { min-height: 360px; }
+      .art-stack > div { min-height: 220px; }
+    }
+
+    @media (max-width: 720px) {
+      .site-header .wrap { align-items: flex-start; flex-direction: column; }
+      .hero { padding-top: 44px; }
+      .hero-copy,
+      .feature,
+      .panel,
+      .quote,
+      .cta,
+      .portfolio-card,
+      .design-card { padding: 22px; }
+      .mini-stats { grid-template-columns: 1fr; }
+      .nav { gap: 12px; }
+      h1 { font-size: clamp(2.6rem, 14vw, 4.2rem); }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Chelsea Whitney Art</h1>
-    <p>Photography, graphic design, and digital art for the Rogue Valley, Oregon.</p>
-    <p>Site scaffold is live and ready for assets, copy, and service structure.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Chelsea Whitney Art</a>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#digital-art">Digital Art</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Rogue Valley, Oregon</div>
+          <h1>Photography with wild soul, detail, and presence.</h1>
+          <p>
+            Chelsea Whitney Art blends photography, digital art, and visual storytelling into imagery that feels grounded in nature and shaped by a strong creative point of view.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Book a project</a>
+            <a class="button-secondary" href="#portfolio">View the work</a>
+          </div>
+          <div class="mini-stats">
+            <div class="stat">
+              <strong>Wildlife + nature</strong>
+              <span>Story-rich imagery inspired by the Pacific Northwest.</span>
+            </div>
+            <div class="stat">
+              <strong>Macro detail</strong>
+              <span>Close-up work that turns tiny moments into art.</span>
+            </div>
+            <div class="stat">
+              <strong>Digital art</strong>
+              <span>Composites and stylized visuals with a mystical edge.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="art-main">
+            <div class="art-main-text">
+              <strong>Photography that balances clarity, mood, and wonder.</strong>
+              <span>Built to showcase fine details, dramatic light, and a strong sense of place.</span>
+            </div>
+          </div>
+          <div class="art-stack">
+            <div class="macro">
+              <div>
+                <strong>Macro and pollinator studies</strong><br />
+                Intimate close-ups with softness, texture, and color.
+              </div>
+            </div>
+            <div class="digital">
+              <div>
+                <strong>Composite and digital artwork</strong><br />
+                Photography remixed into symbolic, atmospheric visual pieces.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>Creative services</h2>
+          <p>
+            A flexible studio direction built around photography first, with room for art-forward commissions, custom visuals, and design support.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="feature">
+            <span class="tag">Photography</span>
+            <h3>Nature and wildlife photography</h3>
+            <p>Fine art imagery and commissioned photography focused on birds, pollinators, landscapes, and the quiet intensity of the natural world.</p>
+          </article>
+
+          <article class="feature">
+            <span class="tag">Portraits + sessions</span>
+            <h3>Personal and local brand sessions</h3>
+            <p>Portrait, lifestyle, and creative sessions for artists, makers, local businesses, and people who want something more expressive than standard photo work.</p>
+          </article>
+
+          <article class="feature">
+            <span class="tag">Digital art</span>
+            <h3>Composites, visuals, and design</h3>
+            <p>Stylized artwork, layered image treatments, and digital design support for prints, promotional visuals, and creative brand storytelling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>Featured portfolio directions</h2>
+          <p>
+            Built from the first asset set, the site is already leaning into the strongest themes in the work: birds of prey, bee macro imagery, and surreal composite art.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card wildlife">
+            <div>
+              <span class="tag">Featured</span>
+              <h3>Raptors and wildlife</h3>
+              <p>Sharp wildlife portraits, strong silhouettes, and dramatic natural light that give the work a grounded, editorial feel.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card macro">
+            <div>
+              <span class="tag">Close-up</span>
+              <h3>Bee and bloom macro</h3>
+              <p>Texture, pollen, color, and shallow depth of field turned into intimate, almost abstract studies.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card portrait">
+            <div>
+              <span class="tag">Open lane</span>
+              <h3>Session work</h3>
+              <p>This section is ready for portraits, couples, branding sessions, or local small-business photography once more assets arrive.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="digital-art">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>Digital art and visual design</h2>
+          <p>
+            Not just documentation. The work also has a symbolic, layered side, where photography becomes the foundation for moodier, more dreamlike final pieces.
+          </p>
+        </div>
+
+        <div class="design-grid">
+          <article class="design-card composite">
+            <div>
+              <span class="tag">Composite work</span>
+              <h3>Photography transformed into art prints</h3>
+              <p>Celestial motifs, geometric overlays, floral layering, and atmospheric edits give the work a distinctive visual signature.</p>
+            </div>
+          </article>
+
+          <article class="design-card branding">
+            <div>
+              <span class="tag">Design support</span>
+              <h3>Visual assets for local brands and events</h3>
+              <p>Artwork, social graphics, digital promos, and creative direction for businesses and projects that want something more handcrafted and expressive.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="panel">
+          <span class="tag">About the studio</span>
+          <h2>Rooted in Rogue Valley light, texture, and wildness.</h2>
+          <p>
+            Chelsea Whitney Art is being shaped as a local creative studio with photography at the center, supported by digital art and design services that extend the same visual voice.
+          </p>
+          <ul>
+            <li>Local positioning for Rogue Valley, Medford, Ashland, Jacksonville, and surrounding Southern Oregon communities</li>
+            <li>Flexible structure for photography packages, custom commissions, and art print sales</li>
+            <li>Homepage already designed to grow into a fuller portfolio and booking site</li>
+          </ul>
+        </div>
+
+        <aside class="quote">
+          <div>
+            <span class="tag">Creative direction</span>
+            <strong>Elegant, nature-led, and a little mystical feels like the right lane.</strong>
+            <p>
+              The first uploaded pieces already point toward a brand that is part fine-art photography, part naturalist observation, and part symbolic digital artwork.
+            </p>
+          </div>
+          <p><strong style="font-size:1rem; margin:0;">Next best move:</strong> add logo, preferred contact method, service priorities, and more portfolio images so the homepage can turn into a complete booking-ready site.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="cta">
+        <div>
+          <span class="tag" style="background: rgba(255,255,255,0.12); color: white;">Start a project</span>
+          <h2>Ready to turn this into a full client-facing site.</h2>
+          <p>
+            Send over the next batch of images, service priorities, and any contact details you want published. I can turn this homepage into a full branded website fast.
+          </p>
+        </div>
+        <div class="cta-card">
+          <strong style="display:block; font-size:1.1rem; margin-bottom:10px;">What I need next</strong>
+          <p style="margin:0; color: rgba(255,255,255,0.82);">
+            Logo or wordmark, contact email, location phrasing, social links, service list, and the strongest 12 to 20 images for a proper portfolio buildout.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Chelsea Whitney Art, photography, digital art, and visual design in the Rogue Valley, Oregon.</div>
+  </footer>
 </body>
 </html>
