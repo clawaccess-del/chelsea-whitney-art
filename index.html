@@ -5,24 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chelsea Whitney Art | Rogue Valley Photographer and Artist</title>
   <meta name="description" content="Chelsea Whitney Art is a Rogue Valley photographer and artist creating personal, nature-rooted imagery, digital art, and visual storytelling for Southern Oregon." />
-  <meta name="theme-color" content="#101522" />
+  <meta name="theme-color" content="#1b1d23" />
   <style>
     :root {
       color-scheme: light;
-      --bg: #f6f0ea;
-      --surface: rgba(255, 255, 255, 0.72);
-      --surface-strong: rgba(255, 255, 255, 0.9);
-      --ink: #1e2430;
-      --muted: #5f6673;
-      --line: rgba(24, 31, 45, 0.12);
-      --deep: #101522;
-      --accent: #c764a0;
-      --accent-2: #6c88d6;
-      --gold: #efc86f;
-      --shadow: 0 24px 60px rgba(16, 21, 34, 0.12);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
+      --bg: #f5efe7;
+      --paper: rgba(255, 251, 246, 0.74);
+      --ink: #1d2330;
+      --muted: #5d6673;
+      --line: rgba(29, 35, 48, 0.12);
+      --deep: #151923;
+      --accent: #b05d8d;
+      --accent-soft: #d8b9ca;
+      --blue: #7e93c8;
+      --gold: #e5c56d;
+      --shadow: 0 22px 55px rgba(21, 25, 35, 0.1);
       --wrap: 1180px;
     }
 
@@ -33,115 +30,119 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(108, 136, 214, 0.2), transparent 30%),
-        radial-gradient(circle at top right, rgba(199, 100, 160, 0.18), transparent 32%),
-        linear-gradient(180deg, #edf5ff 0%, #f7efe6 28%, #f6f0ea 100%);
-      line-height: 1.6;
+        radial-gradient(circle at top left, rgba(126, 147, 200, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(176, 93, 141, 0.14), transparent 32%),
+        linear-gradient(180deg, #eef2f8 0%, #f5efe7 26%, #f7f1e9 100%);
+      line-height: 1.65;
     }
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
+    h1, h2, h3, p { margin-top: 0; }
 
-    .wrap { width: min(var(--wrap), calc(100% - 32px)); margin: 0 auto; }
+    h1, h2, h3, .brand, .section-kicker, .ribbon span {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .wrap {
+      width: min(var(--wrap), calc(100% - 34px));
+      margin: 0 auto;
+    }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 10;
       backdrop-filter: blur(16px);
-      background: rgba(246, 240, 234, 0.72);
-      border-bottom: 1px solid rgba(24, 31, 45, 0.08);
+      background: rgba(247, 241, 233, 0.66);
+      border-bottom: 1px solid rgba(29, 35, 48, 0.08);
     }
 
     .site-header .wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 18px;
       padding: 18px 0;
-      gap: 16px;
     }
 
     .brand {
-      font-size: 0.95rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
       font-weight: 700;
       color: var(--deep);
     }
 
     .nav {
       display: flex;
-      gap: 18px;
       flex-wrap: wrap;
       justify-content: flex-end;
+      gap: 18px;
       font-size: 0.95rem;
       color: var(--muted);
     }
 
+    .nav a { position: relative; }
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.18s ease;
+      opacity: 0.55;
+    }
+    .nav a:hover::after { transform: scaleX(1); }
+
     .hero {
-      padding: 84px 0 42px;
+      padding: 76px 0 46px;
+      overflow: clip;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .hero-copy,
-    .hero-art,
-    .panel,
-    .feature,
-    .quote,
-    .cta {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.5);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-    }
-
-    .hero-copy {
-      border-radius: var(--radius-xl);
-      padding: 44px;
-      position: relative;
-      overflow: hidden;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 40px;
+      align-items: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.85rem;
-      letter-spacing: 0.18em;
+      gap: 12px;
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent-2);
+      color: var(--blue);
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .eyebrow::before {
       content: "";
-      width: 40px;
+      width: 42px;
       height: 1px;
       background: currentColor;
-      opacity: 0.7;
+      opacity: 0.75;
     }
 
-    h1, h2, h3, p { margin-top: 0; }
-
     h1 {
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      line-height: 0.95;
-      margin-bottom: 20px;
+      font-size: clamp(3.5rem, 7vw, 6.2rem);
+      line-height: 0.92;
       letter-spacing: -0.05em;
       color: var(--deep);
+      margin-bottom: 22px;
+      max-width: 10ch;
     }
 
     .hero-copy p {
-      font-size: 1.1rem;
-      color: var(--muted);
       max-width: 58ch;
+      font-size: 1.08rem;
+      color: var(--muted);
       margin-bottom: 28px;
     }
 
@@ -149,7 +150,7 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     .button,
@@ -160,370 +161,452 @@
       min-height: 48px;
       padding: 0 20px;
       border-radius: 999px;
-      font-weight: 700;
       transition: transform 0.18s ease, background 0.18s ease;
+      font-weight: 700;
     }
 
     .button {
-      background: linear-gradient(135deg, var(--deep), #27324c);
+      background: var(--deep);
       color: white;
+      box-shadow: 0 18px 34px rgba(21, 25, 35, 0.18);
     }
 
     .button-secondary {
-      background: rgba(16, 21, 34, 0.06);
+      border: 1px solid rgba(29, 35, 48, 0.12);
+      background: rgba(255, 255, 255, 0.5);
       color: var(--deep);
-      border: 1px solid rgba(16, 21, 34, 0.08);
     }
 
     .button:hover,
     .button-secondary:hover { transform: translateY(-1px); }
 
-    .mini-stats {
+    .hero-notes {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      gap: 16px;
     }
 
-    .stat {
-      background: rgba(255,255,255,0.54);
-      border: 1px solid rgba(16, 21, 34, 0.06);
-      border-radius: var(--radius-md);
-      padding: 14px;
+    .hero-notes div {
+      padding-top: 12px;
+      border-top: 1px solid rgba(29, 35, 48, 0.12);
     }
 
-    .stat strong {
+    .hero-notes strong {
       display: block;
-      font-size: 1rem;
       color: var(--deep);
+      margin-bottom: 5px;
+      font-size: 0.98rem;
     }
 
-    .stat span {
+    .hero-notes span {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .hero-collage {
+      position: relative;
+      min-height: 760px;
+    }
+
+    .piece {
+      position: absolute;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #ddd;
+    }
+
+    .piece img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .piece-main {
+      inset: 44px 150px 86px 40px;
+      border-radius: 38px 38px 120px 38px;
+      transform: rotate(-3deg);
+    }
+
+    .piece-top {
+      width: 250px;
+      height: 220px;
+      top: 0;
+      right: 10px;
+      border-radius: 26px 90px 26px 26px;
+      transform: rotate(6deg);
+    }
+
+    .piece-middle {
+      width: 235px;
+      height: 290px;
+      right: 0;
+      top: 245px;
+      border-radius: 120px 26px 26px 26px;
+      transform: rotate(3deg);
+    }
+
+    .piece-bottom {
+      width: 220px;
+      height: 210px;
+      left: 0;
+      bottom: 0;
+      border-radius: 24px 24px 80px 24px;
+      transform: rotate(5deg);
+    }
+
+    .scrap,
+    .hero-caption {
+      position: absolute;
+      background: var(--paper);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: var(--shadow);
+    }
+
+    .scrap {
+      top: 140px;
+      left: -10px;
+      width: 190px;
+      padding: 16px;
+      border-radius: 24px;
+      transform: rotate(-6deg);
+    }
+
+    .scrap strong {
       display: block;
+      margin-bottom: 6px;
+      color: var(--deep);
+      font-size: 1rem;
+    }
+
+    .scrap span,
+    .hero-caption span {
       color: var(--muted);
       font-size: 0.92rem;
-      margin-top: 4px;
     }
 
-    .hero-art {
-      border-radius: var(--radius-xl);
-      padding: 18px;
-      display: grid;
-      grid-template-columns: 1fr 0.78fr;
-      gap: 18px;
-      min-height: 100%;
+    .hero-caption {
+      right: 70px;
+      bottom: 30px;
+      max-width: 260px;
+      padding: 18px 20px;
+      border-radius: 26px;
     }
 
-    .art-main,
-    .art-stack > div,
-    .portfolio-card,
-    .design-card,
-    .quote {
-      border-radius: 22px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .art-main {
-      min-height: 560px;
-      background:
-        linear-gradient(180deg, rgba(9, 18, 40, 0.08), rgba(9, 18, 40, 0.72)),
-        url("assets/images/eagle-branch.jpg") center 24% / cover no-repeat;
-      display: flex;
-      align-items: flex-end;
-      padding: 26px;
-    }
-
-    .art-main::before {
-      content: "Wildlife and story-driven imagery";
-      position: absolute;
-      inset: 18px auto auto 18px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.18);
-      color: white;
-      font-size: 0.82rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      backdrop-filter: blur(12px);
-    }
-
-    .art-main-text {
-      color: white;
-      position: relative;
-      z-index: 1;
-    }
-
-    .art-main-text strong {
+    .hero-caption strong {
       display: block;
-      font-size: 1.4rem;
-      line-height: 1.1;
-      margin-bottom: 10px;
+      color: var(--deep);
+      margin-bottom: 6px;
+      font-size: 1rem;
     }
 
-    .art-main-text span {
-      color: rgba(255,255,255,0.82);
-      font-size: 0.95rem;
+    .ribbon {
+      padding: 22px 0 10px;
     }
 
-    .art-stack {
+    .ribbon-track {
       display: grid;
-      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      border-top: 1px solid rgba(29, 35, 48, 0.12);
+      border-bottom: 1px solid rgba(29, 35, 48, 0.12);
+      padding: 18px 0;
     }
 
-    .art-stack > div {
-      min-height: 271px;
-      padding: 22px;
-      display: flex;
-      align-items: flex-end;
-      color: white;
+    .ribbon span {
+      font-size: 1.08rem;
+      color: var(--deep);
+      letter-spacing: 0.02em;
     }
 
-    .art-stack .macro {
-      background:
-        linear-gradient(180deg, rgba(46, 6, 54, 0.04), rgba(46, 6, 54, 0.72)),
-        url("assets/images/bee-purple-bloom.jpg") center center / cover no-repeat;
-    }
+    section { padding: 40px 0; }
 
-    .art-stack .digital {
-      background:
-        linear-gradient(180deg, rgba(4, 10, 28, 0.06), rgba(4, 10, 28, 0.78)),
-        url("assets/images/hawk-flower-art.jpg") center center / cover no-repeat;
-    }
-
-    section { padding: 42px 0; }
-
-    .section-heading {
+    .section-head {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: 0.82fr 1.18fr;
       gap: 24px;
       align-items: end;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
-    .section-heading h2 {
-      font-size: clamp(2rem, 3.4vw, 3.2rem);
+    .section-kicker {
+      font-size: 0.9rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 0.96;
       letter-spacing: -0.04em;
-      line-height: 1;
       color: var(--deep);
       margin-bottom: 0;
+      max-width: 12ch;
     }
 
-    .section-heading p {
-      color: var(--muted);
+    .section-head p {
       margin-bottom: 0;
-      font-size: 1.05rem;
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 62ch;
     }
 
-    .services-grid,
-    .portfolio-grid,
-    .design-grid {
+    .services-list {
       display: grid;
-      gap: 18px;
-    }
-
-    .services-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
     }
 
-    .feature {
-      border-radius: var(--radius-lg);
-      padding: 28px;
+    .service {
+      padding: 0 18px 0 0;
+      border-right: 1px solid rgba(29, 35, 48, 0.1);
     }
 
-    .feature h3,
-    .portfolio-card h3,
-    .design-card h3 {
-      font-size: 1.35rem;
+    .service:last-child { border-right: 0; }
+    .service .label {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .service h3 {
+      font-size: 1.45rem;
+      line-height: 1.08;
       margin-bottom: 10px;
       color: var(--deep);
     }
 
-    .feature p,
-    .portfolio-card p,
-    .design-card p,
-    .cta p,
-    .quote p {
-      color: var(--muted);
-    }
-
-    .tag {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(108, 136, 214, 0.12);
-      color: var(--accent-2);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+    .service p { color: var(--muted); margin-bottom: 0; }
 
     .portfolio-grid {
+      display: grid;
       grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 18px;
+      align-items: start;
     }
 
-    .portfolio-card,
-    .design-card {
-      min-height: 330px;
-      padding: 26px;
-      display: flex;
-      align-items: flex-end;
-      background: var(--surface-strong);
+    .portfolio-piece {
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+      border-radius: 30px;
       box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.6);
+      background: #ddd;
     }
 
-    .portfolio-card::before,
-    .design-card::before {
+    .portfolio-piece.tall { min-height: 560px; border-radius: 38px 38px 120px 38px; }
+    .portfolio-piece.medium { min-height: 360px; }
+    .portfolio-piece.short { min-height: 220px; }
+    .portfolio-piece.round { border-radius: 120px 30px 30px 30px; }
+    .portfolio-piece.soft { border-radius: 30px 90px 30px 30px; }
+
+    .portfolio-piece img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portfolio-piece::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(16, 21, 34, 0.04), rgba(16, 21, 34, 0.74));
+      background: linear-gradient(180deg, rgba(10, 12, 18, 0.03), rgba(10, 12, 18, 0.5));
     }
 
-    .portfolio-card > div,
-    .design-card > div {
-      position: relative;
+    .portfolio-piece .note {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
       z-index: 1;
       color: white;
     }
 
-    .portfolio-card h3,
-    .design-card h3,
-    .portfolio-card p,
-    .design-card p { color: white; }
-
-    .portfolio-card.wildlife {
-      background:
-        linear-gradient(180deg, rgba(16, 21, 34, 0.02), rgba(16, 21, 34, 0.32)),
-        url("assets/images/hawk-pair.jpg") center 38% / cover no-repeat;
+    .portfolio-piece .note strong {
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 5px;
     }
 
-    .portfolio-card.macro {
-      background:
-        linear-gradient(180deg, rgba(16, 21, 34, 0.02), rgba(16, 21, 34, 0.32)),
-        url("assets/images/bee-flower-macro.jpg") center center / cover no-repeat;
+    .portfolio-piece .note span {
+      display: block;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.95rem;
     }
 
-    .portfolio-card.portrait {
-      background:
-        linear-gradient(180deg, rgba(16, 21, 34, 0.02), rgba(16, 21, 34, 0.34)),
-        url("assets/images/hawk-wire.jpg") center 22% / cover no-repeat;
-    }
-
-    .design-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .design-card.composite {
-      background:
-        linear-gradient(180deg, rgba(16, 21, 34, 0.04), rgba(16, 21, 34, 0.38)),
-        url("assets/images/hawk-flower-art.jpg") center center / cover no-repeat;
-    }
-
-    .design-card.branding {
-      background:
-        linear-gradient(180deg, rgba(16, 21, 34, 0.04), rgba(16, 21, 34, 0.38)),
-        url("assets/images/soaring-wing.jpg") center center / cover no-repeat;
-    }
-
-    .about-grid {
+    .portfolio-column {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
       gap: 18px;
     }
 
-    .panel,
-    .quote,
-    .cta {
-      border-radius: var(--radius-lg);
-      padding: 30px;
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 34px;
+      align-items: start;
     }
 
-    .panel ul {
-      padding-left: 18px;
-      margin: 18px 0 0;
+    .story-image {
+      position: relative;
+      min-height: 620px;
+    }
+
+    .story-image .primary,
+    .story-image .secondary {
+      position: absolute;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #ddd;
+    }
+
+    .story-image .primary {
+      inset: 0 80px 90px 0;
+      border-radius: 34px 34px 110px 34px;
+    }
+
+    .story-image .secondary {
+      width: 220px;
+      height: 250px;
+      right: 0;
+      bottom: 0;
+      border-radius: 100px 24px 24px 24px;
+      transform: rotate(-6deg);
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-copy {
+      padding-top: 26px;
+    }
+
+    .story-copy .quote-line {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      color: var(--deep);
+      max-width: 13ch;
+      margin-bottom: 18px;
+    }
+
+    .story-copy p {
       color: var(--muted);
+      max-width: 60ch;
     }
 
-    .panel li + li { margin-top: 10px; }
-
-    .quote {
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.55)),
-        radial-gradient(circle at top right, rgba(239, 200, 111, 0.25), transparent 34%);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .story-points {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
     }
 
-    .quote strong {
+    .story-points div {
+      padding-top: 14px;
+      border-top: 1px solid rgba(29, 35, 48, 0.1);
+    }
+
+    .story-points strong {
       display: block;
-      font-size: 1.35rem;
-      line-height: 1.2;
-      margin-bottom: 16px;
+      margin-bottom: 4px;
       color: var(--deep);
     }
 
-    .cta {
-      margin: 42px 0 70px;
-      background: linear-gradient(135deg, rgba(16, 21, 34, 0.96), rgba(39, 50, 76, 0.96));
-      color: white;
+    .contact-block {
+      margin: 54px 0 72px;
+      padding: 38px 0 0;
+      border-top: 1px solid rgba(29, 35, 48, 0.12);
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 20px;
-      align-items: center;
+      gap: 28px;
+      align-items: start;
     }
 
-    .cta h2,
-    .cta p { color: white; }
+    .contact-block h2 { max-width: 10ch; }
+    .contact-block p {
+      color: var(--muted);
+      max-width: 62ch;
+      font-size: 1.04rem;
+    }
 
-    .cta-card {
-      padding: 20px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
+    .contact-side {
+      display: grid;
+      gap: 14px;
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.48);
+      border-radius: 28px;
+      border: 1px solid rgba(29,35,48,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-side strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--deep);
     }
 
     .site-footer {
-      padding: 0 0 42px;
+      padding: 0 0 36px;
       color: var(--muted);
       font-size: 0.95rem;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1024px) {
       .hero-grid,
-      .section-heading,
-      .services-grid,
-      .portfolio-grid,
-      .design-grid,
-      .about-grid,
-      .cta {
+      .section-head,
+      .story-grid,
+      .contact-block,
+      .portfolio-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-art {
-        grid-template-columns: 1fr;
-      }
-
-      .art-main { min-height: 360px; }
-      .art-stack > div { min-height: 220px; }
+      .hero-collage { min-height: 680px; }
+      .services-list { grid-template-columns: 1fr; gap: 20px; }
+      .service { border-right: 0; padding-right: 0; }
+      .ribbon-track { grid-template-columns: 1fr 1fr; }
+      .contact-block h2,
+      h2,
+      h1 { max-width: none; }
     }
 
     @media (max-width: 720px) {
-      .site-header .wrap { align-items: flex-start; flex-direction: column; }
-      .hero { padding-top: 44px; }
-      .hero-copy,
-      .feature,
-      .panel,
-      .quote,
-      .cta,
-      .portfolio-card,
-      .design-card { padding: 22px; }
-      .mini-stats { grid-template-columns: 1fr; }
-      .nav { gap: 12px; }
-      h1 { font-size: clamp(2.6rem, 14vw, 4.2rem); }
+      .site-header .wrap {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero { padding-top: 48px; }
+      .hero-notes { grid-template-columns: 1fr; gap: 12px; }
+      .ribbon-track { grid-template-columns: 1fr; }
+      .hero-collage { min-height: 560px; }
+      .piece-main { inset: 50px 56px 110px 20px; }
+      .piece-top { width: 155px; height: 145px; right: 0; }
+      .piece-middle { width: 155px; height: 190px; right: 0; top: 178px; }
+      .piece-bottom { width: 150px; height: 145px; left: 0; }
+      .scrap {
+        width: 150px;
+        left: 4px;
+        top: 122px;
+        padding: 12px;
+      }
+      .hero-caption {
+        right: 14px;
+        bottom: 14px;
+        max-width: 190px;
+        padding: 14px;
+      }
+      .story-image { min-height: 470px; }
+      .story-image .primary { inset: 0 48px 74px 0; }
+      .story-image .secondary { width: 160px; height: 185px; }
+      .contact-side { padding: 18px; }
     }
   </style>
 </head>
@@ -531,10 +614,9 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#top">Chelsea Whitney Art</a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#digital-art">Digital Art</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -546,81 +628,85 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Rogue Valley, Oregon</div>
-          <h1>Local photography and art with a personal, hometown feel.</h1>
+          <h1>Photography and art with a softer, more human kind of presence.</h1>
           <p>
-            Chelsea Whitney Art is about making work that feels personal, grounded, and real, from wildlife and macro photography to creative sessions, digital art, and custom visuals shaped by life in Southern Oregon.
+            Chelsea Whitney Art is rooted in wildlife, macro detail, atmospheric edits, and local creative work that feels personal instead of polished into sameness. The goal is not a faceless studio look. It is thoughtful imagery with personality, place, and a real person behind it.
           </p>
           <div class="hero-actions">
             <a class="button" href="#contact">Work with Chelsea</a>
-            <a class="button-secondary" href="#portfolio">See featured work</a>
+            <a class="button-secondary" href="#portfolio">See the work</a>
           </div>
-          <div class="mini-stats">
-            <div class="stat">
-              <strong>Local and approachable</strong>
-              <span>A personal creative studio, not a faceless agency.</span>
+          <div class="hero-notes">
+            <div>
+              <strong>Nature-led</strong>
+              <span>Birds, pollinators, textures, and the quiet drama of Southern Oregon light.</span>
             </div>
-            <div class="stat">
-              <strong>Nature-rooted imagery</strong>
-              <span>Wildlife, close-up detail, and Southern Oregon atmosphere.</span>
+            <div>
+              <strong>Personal</strong>
+              <span>Made to feel like meeting a local artist, not clicking through a canned template.</span>
             </div>
-            <div class="stat">
-              <strong>Creative custom work</strong>
-              <span>Photography, digital art, and visual pieces made with personality.</span>
+            <div>
+              <strong>Flexible</strong>
+              <span>Wildlife, portrait sessions, digital art, and custom visual work can all live here naturally.</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-art">
-          <div class="art-main">
-            <div class="art-main-text">
-              <strong>Photography that balances clarity, mood, and wonder.</strong>
-              <span>Built to showcase fine details, dramatic light, and a strong sense of place.</span>
-            </div>
+        <div class="hero-collage" aria-hidden="true">
+          <div class="piece piece-main"><img src="assets/images/eagle-branch.jpg" alt="Bald eagle perched on a branch" /></div>
+          <div class="piece piece-top"><img src="assets/images/bee-purple-bloom.jpg" alt="Bee on a purple flower" /></div>
+          <div class="piece piece-middle"><img src="assets/images/hawk-flower-art.jpg" alt="Stylized hawk and flower composite artwork" /></div>
+          <div class="piece piece-bottom"><img src="assets/images/soaring-wing.jpg" alt="Bird in flight silhouette" /></div>
+          <div class="scrap">
+            <strong>Not overly polished.</strong>
+            <span>A little organic, a little artful, and much closer to Chelsea’s actual lane.</span>
           </div>
-          <div class="art-stack">
-            <div class="macro">
-              <div>
-                <strong>Macro and pollinator studies</strong><br />
-                Intimate close-ups with softness, texture, and color.
-              </div>
-            </div>
-            <div class="digital">
-              <div>
-                <strong>Composite and digital artwork</strong><br />
-                Photography remixed into symbolic, atmospheric visual pieces.
-              </div>
-            </div>
+          <div class="hero-caption">
+            <strong>Wildlife, macro, and visual storytelling</strong>
+            <span>Built to feel more like an artist’s space than a corporate brochure.</span>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="ribbon" aria-label="Creative themes">
+      <div class="wrap ribbon-track">
+        <span>Raptors and wildlife</span>
+        <span>Bee and bloom macro</span>
+        <span>Digital art and layered edits</span>
+        <span>Local sessions and personal commissions</span>
+      </div>
+    </section>
+
     <section id="services">
       <div class="wrap">
-        <div class="section-heading">
-          <h2>Creative services</h2>
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Creative services</div>
+            <h2>Less agency energy, more local artist energy.</h2>
+          </div>
           <p>
-            Built to feel like a real local photographer people can actually reach out to, while still leaving room for art-forward commissions and custom creative work.
+            Looking at strong photographer portfolio references, the common thread is not lots of boxes. It is confidence, breathing room, image-led storytelling, and a voice that feels like the person behind the work. That is the direction here.
           </p>
         </div>
 
-        <div class="services-grid">
-          <article class="feature">
-            <span class="tag">Photography</span>
-            <h3>Nature and wildlife photography</h3>
-            <p>Photography centered on birds, pollinators, landscapes, and the kind of quiet natural moments that make Southern Oregon feel like home.</p>
+        <div class="services-list">
+          <article class="service">
+            <span class="label">Photography</span>
+            <h3>Wildlife and nature work</h3>
+            <p>Birds, pollinators, natural detail, and local landscapes photographed with a calm, observant, story-first eye.</p>
           </article>
 
-          <article class="feature">
-            <span class="tag">Portraits + sessions</span>
-            <h3>Personal and local brand sessions</h3>
-            <p>Portrait, lifestyle, and creative sessions for individuals, families, artists, and local businesses who want photography that feels warm, thoughtful, and personal.</p>
+          <article class="service">
+            <span class="label">Sessions</span>
+            <h3>Portraits and local brand imagery</h3>
+            <p>Warm, personal photography for individuals, artists, makers, and small businesses that want something grounded and real.</p>
           </article>
 
-          <article class="feature">
-            <span class="tag">Digital art</span>
-            <h3>Composites, visuals, and design</h3>
-            <p>Stylized artwork, layered image treatments, and custom visual pieces for prints, promotions, gifts, or brand storytelling with a more artistic touch.</p>
+          <article class="service">
+            <span class="label">Art + design</span>
+            <h3>Composites, prints, and custom visuals</h3>
+            <p>Photography can also become artwork here, through layered edits, symbolic pieces, promotional visuals, or commissioned creative work.</p>
           </article>
         </div>
       </div>
@@ -628,119 +714,127 @@
 
     <section id="portfolio">
       <div class="wrap">
-        <div class="section-heading">
-          <h2>Featured portfolio directions</h2>
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Featured work</div>
+            <h2>A more natural, image-first portfolio direction.</h2>
+          </div>
           <p>
-            The first images already tell a clear story: strong wildlife work, intimate macro photography, and artistic composites that feel personal instead of generic.
+            The sites I pulled inspiration from tended to let the imagery carry more weight, use asymmetry well, and keep the copy supportive instead of dominant. So this section is arranged more like a living portfolio wall than a row of identical cards.
           </p>
         </div>
 
         <div class="portfolio-grid">
-          <article class="portfolio-card wildlife">
-            <div>
-              <span class="tag">Featured</span>
-              <h3>Raptors and wildlife</h3>
-              <p>Sharp wildlife portraits, strong silhouettes, and dramatic natural light that give the work a grounded, editorial feel.</p>
+          <article class="portfolio-piece tall">
+            <img src="assets/images/hawk-pair.jpg" alt="Two hawks perched together" />
+            <div class="note">
+              <strong>Wildlife portraits</strong>
+              <span>Strong subject presence, editorial framing, and a grounded natural mood.</span>
             </div>
           </article>
 
-          <article class="portfolio-card macro">
-            <div>
-              <span class="tag">Close-up</span>
-              <h3>Bee and bloom macro</h3>
-              <p>Texture, pollen, color, and shallow depth of field turned into intimate, almost abstract studies.</p>
-            </div>
-          </article>
+          <div class="portfolio-column">
+            <article class="portfolio-piece medium round">
+              <img src="assets/images/bee-flower-macro.jpg" alt="Close-up bee on a flower" />
+              <div class="note">
+                <strong>Macro studies</strong>
+                <span>Close, tactile, colorful work with softness and detail.</span>
+              </div>
+            </article>
+            <article class="portfolio-piece short soft">
+              <img src="assets/images/hawk-wire.jpg" alt="Hawk perched on a utility line" />
+              <div class="note">
+                <strong>Everyday wildness</strong>
+                <span>Finding character in ordinary local moments.</span>
+              </div>
+            </article>
+          </div>
 
-          <article class="portfolio-card portrait">
-            <div>
-              <span class="tag">Open lane</span>
-              <h3>Local session work</h3>
-              <p>This section is ready to grow into portraits, couples, branding sessions, or local small-business photography as more client-facing images come in.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="digital-art">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2>Digital art and visual design</h2>
-          <p>
-            This work is not only about capturing a moment. It also has an imaginative side, where real photography turns into layered, expressive art.
-          </p>
-        </div>
-
-        <div class="design-grid">
-          <article class="design-card composite">
-            <div>
-              <span class="tag">Composite work</span>
-              <h3>Photography transformed into art prints</h3>
-              <p>Celestial motifs, geometric overlays, floral layering, and atmospheric edits give the work a distinctive visual signature.</p>
-            </div>
-          </article>
-
-          <article class="design-card branding">
-            <div>
-              <span class="tag">Design support</span>
-              <h3>Visual assets for local brands and events</h3>
-              <p>Artwork, social graphics, digital promos, and creative direction for businesses and projects that want something more handcrafted and expressive.</p>
-            </div>
-          </article>
+          <div class="portfolio-column">
+            <article class="portfolio-piece medium soft">
+              <img src="assets/images/hawk-flower-art.jpg" alt="Stylized hawk on flower composite" />
+              <div class="note">
+                <strong>Digital art</strong>
+                <span>Photography pushed into symbolic, layered visual pieces.</span>
+              </div>
+            </article>
+            <article class="portfolio-piece short round">
+              <img src="assets/images/soaring-wing.jpg" alt="Bird flying in silhouette" />
+              <div class="note">
+                <strong>Movement and mood</strong>
+                <span>Atmosphere matters as much as sharpness here.</span>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="about">
-      <div class="wrap about-grid">
-        <div class="panel">
-          <span class="tag">About Chelsea Whitney Art</span>
-          <h2>A local creative presence shaped by Rogue Valley light, texture, and wildness.</h2>
-          <p>
-            Chelsea Whitney Art is being shaped as a personal local business, with photography at the center and digital art alongside it, so the site feels more like meeting the artist than browsing a generic portfolio.
-          </p>
-          <ul>
-            <li>Grounded in Rogue Valley, Medford, Ashland, Jacksonville, and surrounding Southern Oregon communities</li>
-            <li>Set up for photography sessions, custom commissions, and future art print sales</li>
-            <li>Designed to grow into a fuller portfolio and booking site without losing that hometown feel</li>
-          </ul>
+      <div class="wrap story-grid">
+        <div class="story-image" aria-hidden="true">
+          <div class="primary"><img src="assets/images/bee-purple-bloom.jpg" alt="Bee on purple flower" /></div>
+          <div class="secondary"><img src="assets/images/eagle-branch.jpg" alt="Bald eagle perched on branch" /></div>
         </div>
 
-        <aside class="quote">
-          <div>
-            <span class="tag">Creative direction</span>
-            <strong>Personal, local, nature-led, and a little mystical feels like the right lane.</strong>
-            <p>
-              The first uploaded pieces point toward a brand that feels like a real person behind the camera, someone local, observant, creative, and connected to the landscape.
-            </p>
+        <div class="story-copy">
+          <div class="section-kicker">About Chelsea Whitney Art</div>
+          <div class="quote-line">A local creative presence shaped by Rogue Valley light, texture, wildlife, and feeling.</div>
+          <p>
+            Chelsea Whitney Art makes the most sense as a personal local business first, one that can grow into sessions, commissions, prints, and creative collaborations without losing the sense that there is an actual artist behind the camera.
+          </p>
+          <p>
+            The strongest references I found online leaned on a few useful ideas: more whitespace, more personality in the type and pacing, fewer repeated cards, and layouts that feel curated around the work instead of imposed on it. That is the shift this version is making.
+          </p>
+
+          <div class="story-points">
+            <div>
+              <strong>Grounded in Southern Oregon</strong>
+              <span>Medford, Ashland, Jacksonville, and the surrounding Rogue Valley all fit naturally into the story.</span>
+            </div>
+            <div>
+              <strong>Open to growth</strong>
+              <span>This can expand into a fuller booking site and portfolio archive without losing its softer, artist-led character.</span>
+            </div>
+            <div>
+              <strong>Built around the work already here</strong>
+              <span>The wildlife and macro images gave the clearest direction, so the design now follows them instead of competing with them.</span>
+            </div>
           </div>
-          <p><strong style="font-size:1rem; margin:0;">Next best move:</strong> add logo, preferred contact method, service priorities, and more portfolio images so the homepage can turn into a complete booking-ready site.</p>
-        </aside>
+        </div>
       </div>
     </section>
 
     <section class="wrap" id="contact">
-      <div class="cta">
+      <div class="contact-block">
         <div>
-          <span class="tag" style="background: rgba(255,255,255,0.12); color: white;">Work with Chelsea</span>
-          <h2>Ready to shape this into a full local photographer site.</h2>
+          <div class="section-kicker">Work with Chelsea</div>
+          <h2>Ready to turn this into a fuller client-facing site.</h2>
           <p>
-            Send over the next batch of images, service priorities, and any contact details you want published. I can keep pushing this toward a warm, client-facing hometown brand fast.
+            The next layer is easy now: add contact details, socials, session priorities, and a bigger image set, then shape this into a more complete local photographer and artist site without falling back into template energy.
           </p>
+          <div class="hero-actions" style="margin-bottom:0;">
+            <a class="button" href="#top">Back to top</a>
+            <a class="button-secondary" href="#portfolio">Review portfolio section</a>
+          </div>
         </div>
-        <div class="cta-card">
-          <strong style="display:block; font-size:1.1rem; margin-bottom:10px;">What I need next</strong>
-          <p style="margin:0; color: rgba(255,255,255,0.82);">
-            Logo or wordmark, contact email, location phrasing, social links, service list, and the strongest 12 to 20 images for a proper portfolio buildout.
-          </p>
-        </div>
+
+        <aside class="contact-side">
+          <div>
+            <strong>Best next additions</strong>
+            <span>Contact email, Instagram or Facebook, preferred location wording, and the strongest 12 to 20 images for a true portfolio buildout.</span>
+          </div>
+          <div>
+            <strong>Strong future pages</strong>
+            <span>About, portfolio, sessions, commissions, prints, and a simple inquiry page would all fit naturally from here.</span>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">Chelsea Whitney Art, photography, digital art, and visual design in the Rogue Valley, Oregon.</div>
+    <div class="wrap">Chelsea Whitney Art, photography, digital art, and visual storytelling in the Rogue Valley, Oregon.</div>
   </footer>
 </body>
 </html>
