@@ -6,6 +6,9 @@
   <title>Chelsea Whitney Art | Rogue Valley Photographer and Artist</title>
   <meta name="description" content="Chelsea Whitney Art is a Rogue Valley photographer and artist creating personal, nature-rooted imagery, digital art, and visual storytelling for Southern Oregon." />
   <meta name="theme-color" content="#1b1d23" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Meow+Script&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
@@ -41,7 +44,7 @@
     h1, h2, h3, p { margin-top: 0; }
 
     h1, h2, h3, .brand, .section-kicker, .ribbon span {
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
     }
 
     .wrap {
@@ -67,10 +70,21 @@
     }
 
     .brand {
-      font-size: 1.15rem;
-      letter-spacing: 0.08em;
-      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: 0.03em;
+      font-weight: 600;
       color: var(--deep);
+    }
+
+    .brand small {
+      display: block;
+      font-family: "Meow Script", cursive;
+      font-size: 1.15rem;
+      line-height: 0.7;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+      margin-top: 2px;
+      margin-left: 2px;
     }
 
     .nav {
@@ -131,12 +145,24 @@
     }
 
     h1 {
-      font-size: clamp(3.5rem, 7vw, 6.2rem);
-      line-height: 0.92;
-      letter-spacing: -0.05em;
+      font-size: clamp(3.9rem, 7.6vw, 6.8rem);
+      line-height: 0.88;
+      letter-spacing: -0.055em;
+      font-weight: 600;
       color: var(--deep);
       margin-bottom: 22px;
       max-width: 10ch;
+      text-wrap: balance;
+    }
+
+    .hero-signature {
+      display: inline-block;
+      font-family: "Meow Script", cursive;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      color: var(--accent);
+      line-height: 0.8;
+      margin: 0 0 10px 4px;
+      transform: rotate(-4deg);
     }
 
     .hero-copy p {
@@ -335,15 +361,18 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 10px;
+      font-weight: 600;
     }
 
     h2 {
-      font-size: clamp(2.2rem, 4vw, 4rem);
-      line-height: 0.96;
-      letter-spacing: -0.04em;
+      font-size: clamp(2.5rem, 4.2vw, 4.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.045em;
+      font-weight: 600;
       color: var(--deep);
       margin-bottom: 0;
       max-width: 12ch;
+      text-wrap: balance;
     }
 
     .section-head p {
@@ -376,8 +405,9 @@
     }
 
     .service h3 {
-      font-size: 1.45rem;
-      line-height: 1.08;
+      font-size: 1.7rem;
+      line-height: 1.02;
+      font-weight: 600;
       margin-bottom: 10px;
       color: var(--deep);
     }
@@ -430,8 +460,11 @@
 
     .portfolio-piece .note strong {
       display: block;
-      font-size: 1.25rem;
-      margin-bottom: 5px;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 1.6rem;
+      line-height: 0.95;
+      font-weight: 600;
+      margin-bottom: 6px;
     }
 
     .portfolio-piece .note span {
@@ -613,7 +646,7 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="#top">Chelsea Whitney Art</a>
+      <a class="brand" href="#top">Chelsea Whitney Art<small>rogue valley</small></a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
@@ -628,6 +661,7 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Rogue Valley, Oregon</div>
+          <div class="hero-signature">Chelsea Whitney</div>
           <h1>Photography and art with a softer, more human kind of presence.</h1>
           <p>
             Chelsea Whitney Art is rooted in wildlife, macro detail, atmospheric edits, and local creative work that feels personal instead of polished into sameness. The goal is not a faceless studio look. It is thoughtful imagery with personality, place, and a real person behind it.
