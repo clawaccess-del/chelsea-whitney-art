@@ -3,813 +3,378 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chelsea Whitney Art | Rogue Valley Photographer and Artist</title>
-  <meta name="description" content="Chelsea Whitney Art is a Rogue Valley photographer and artist creating personal, nature-rooted imagery, digital art, and visual storytelling for Southern Oregon." />
-  <meta name="theme-color" content="#1b1d23" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Chelsea Whitney Art | Personal Photography in the Rogue Valley</title>
+  <meta name="description" content="Warm, personal photography with Chelsea Whitney Art in Southern Oregon. Portraits, weddings, events, wildlife photography, digital art, and creative commissions with care and connection." />
+  <meta name="theme-color" content="#f8f4eb" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       color-scheme: light;
-      --bg: #ffffff;
-      --paper: rgba(255, 255, 255, 0.88);
-      --ink: #294132;
-      --muted: #65766b;
-      --line: rgba(41, 65, 50, 0.12);
-      --deep: #22392b;
-      --accent: #74b26b;
-      --accent-soft: #cde1c9;
-      --blue: #bfd7e6;
-      --gold: #7da6b8;
-      --shadow: 0 22px 55px rgba(34, 57, 43, 0.1);
+      --paper: #f8f4eb;
+      --paper-deep: #eee8dc;
+      --ink: #293f33;
+      --muted: #62695b;
+      --clay: #995738;
+      --line: #dcd8ca;
+      --white: #fffdf8;
       --wrap: 1180px;
     }
-
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(116, 178, 107, 0.09), transparent 24%),
-        radial-gradient(circle at top right, rgba(191, 215, 230, 0.14), transparent 28%),
-        linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-      line-height: 1.65;
-    }
-
+    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 400 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1, h2, h3, .brand, .section-kicker, .ribbon span {
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    }
-
-    .wrap {
-      width: min(var(--wrap), calc(100% - 34px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(16px);
-      background: rgba(255, 255, 255, 0.82);
-      border-bottom: 1px solid rgba(29, 35, 48, 0.08);
-    }
-
-    .site-header .wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 16px 0;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 1.35rem;
-      letter-spacing: 0.03em;
-      font-weight: 600;
-      color: var(--deep);
-    }
-
-    .brand-mark {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 10px 22px rgba(34, 57, 43, 0.12);
-      border: 1px solid rgba(116, 178, 107, 0.2);
-      background: white;
-      flex: 0 0 auto;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 4px;
-    }
-
-    .brand small {
-      display: block;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.72rem;
-      line-height: 1.2;
-      color: #7da6b8;
-      letter-spacing: 0.18em;
-      margin-top: 0;
-      margin-left: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-      opacity: 0.9;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 18px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .nav a { position: relative; }
-    .nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 1px;
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.18s ease;
-      opacity: 0.55;
-    }
-    .nav a:hover::after { transform: scaleX(1); }
-
-    .hero {
-      padding: 34px 0 30px;
-    }
-
-    .hero-shell {
-      position: relative;
-      min-height: 720px;
-      border-radius: 42px;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      background:
-        linear-gradient(180deg, rgba(18, 30, 22, 0.18) 0%, rgba(18, 30, 22, 0.42) 38%, rgba(18, 30, 22, 0.78) 100%),
-        url("assets/images/frosted-tree.jpg") center center / cover no-repeat;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-shell::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(18, 30, 22, 0.58) 0%, rgba(18, 30, 22, 0.28) 42%, rgba(18, 30, 22, 0.08) 100%);
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      gap: 32px;
-      align-items: end;
-      padding: 56px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.82rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.84);
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 42px;
-      height: 1px;
-      background: currentColor;
-      opacity: 0.75;
-    }
-
-    h1 {
-      font-size: clamp(4rem, 7.8vw, 7rem);
-      line-height: 0.88;
-      letter-spacing: -0.055em;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 22px;
-      max-width: 9ch;
-      text-wrap: balance;
-    }
-
-    .hero-signature {
-      display: inline-block;
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-size: clamp(1.15rem, 2vw, 1.5rem);
-      color: rgba(255, 255, 255, 0.9);
-      line-height: 1;
-      margin: 0 0 12px 4px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      opacity: 0.95;
-    }
-
-    .hero-copy {
-      max-width: 700px;
-    }
-
-    .hero-copy p {
-      max-width: 58ch;
-      font-size: 1.08rem;
-      color: rgba(255, 255, 255, 0.84);
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .button,
-    .button-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 999px;
-      transition: transform 0.18s ease, background 0.18s ease;
-      font-weight: 700;
-    }
-
-    .button {
-      background: linear-gradient(135deg, #5f9d61, #77b971);
-      color: white;
-      box-shadow: 0 18px 34px rgba(31, 42, 31, 0.18);
-    }
-
-    .button-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      background: rgba(255, 255, 255, 0.14);
-      color: white;
-      backdrop-filter: blur(8px);
-    }
-
-    .button:hover,
-    .button-secondary:hover { transform: translateY(-1px); }
-
-    .hero-notes {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      align-self: end;
-    }
-
-    .hero-notes div {
-      padding: 16px 16px 14px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-notes strong {
-      display: block;
-      color: white;
-      margin-bottom: 5px;
-      font-size: 0.98rem;
-    }
-
-    .hero-notes span {
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 0.93rem;
-    }
-
-    .ribbon {
-      padding: 22px 0 10px;
-    }
-
-    .ribbon-track {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      border-top: 1px solid rgba(29, 35, 48, 0.12);
-      border-bottom: 1px solid rgba(29, 35, 48, 0.12);
-      padding: 18px 0;
-    }
-
-    .ribbon span {
-      font-size: 1.08rem;
-      color: var(--deep);
-      letter-spacing: 0.02em;
-    }
-
-    section { padding: 54px 0; }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
-      gap: 28px;
-      align-items: end;
-      margin-bottom: 34px;
-    }
-
-    .section-kicker {
-      font-size: 0.9rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    h2 {
-      font-size: clamp(2.5rem, 4.2vw, 4.4rem);
-      line-height: 0.92;
-      letter-spacing: -0.045em;
-      font-weight: 600;
-      color: var(--deep);
-      margin-bottom: 0;
-      max-width: 12ch;
-      text-wrap: balance;
-    }
-
-    .section-head p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 1.03rem;
-      max-width: 62ch;
-    }
-
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 28px;
-    }
-
-    .service {
-      padding: 24px 24px 22px;
-      border: 1px solid rgba(36, 49, 38, 0.08);
-      border-radius: 28px;
-      background: linear-gradient(180deg, rgba(205, 225, 201, 0.16), rgba(255, 255, 255, 0.98));
-      box-shadow: 0 12px 30px rgba(34, 57, 43, 0.05);
-    }
-
-    .service:last-child { border-right: 1px solid rgba(36, 49, 38, 0.08); }
-    .service .label {
-      display: inline-block;
-      color: var(--accent);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .service h3 {
-      font-size: 1.7rem;
-      line-height: 1.02;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: var(--deep);
-    }
-
-    .service p { color: var(--muted); margin-bottom: 0; }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr 0.9fr;
-      gap: 22px;
-      align-items: start;
-    }
-
-    .portfolio-piece {
-      position: relative;
-      overflow: hidden;
-      min-height: 260px;
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-      background: #ddd;
-    }
-
-    .portfolio-piece.tall { min-height: 560px; border-radius: 38px 38px 120px 38px; }
-    .portfolio-piece.medium { min-height: 360px; }
-    .portfolio-piece.short { min-height: 220px; }
-    .portfolio-piece.round { border-radius: 120px 30px 30px 30px; }
-    .portfolio-piece.soft { border-radius: 30px 90px 30px 30px; }
-
-    .portfolio-piece img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .portfolio-piece::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(10, 12, 18, 0.03), rgba(10, 12, 18, 0.5));
-    }
-
-    .portfolio-piece .note {
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      z-index: 1;
-      color: white;
-    }
-
-    .portfolio-piece .note strong {
-      display: block;
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-size: 1.6rem;
-      line-height: 0.95;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .portfolio-piece .note span {
-      display: block;
-      color: rgba(255,255,255,0.84);
-      font-size: 0.95rem;
-    }
-
-    .portfolio-column {
-      display: grid;
-      gap: 18px;
-    }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .story-image {
-      position: relative;
-      min-height: 620px;
-    }
-
-    .story-image .primary,
-    .story-image .secondary {
-      position: absolute;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: #ddd;
-    }
-
-    .story-image .primary {
-      inset: 0 80px 90px 0;
-      border-radius: 34px 34px 110px 34px;
-    }
-
-    .story-image .secondary {
-      width: 220px;
-      height: 250px;
-      right: 0;
-      bottom: 0;
-      border-radius: 100px 24px 24px 24px;
-      transform: rotate(-6deg);
-    }
-
-    .story-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .story-copy {
-      padding-top: 26px;
-    }
-
-    .story-copy .quote-line {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      line-height: 1.1;
-      color: var(--deep);
-      max-width: 13ch;
-      margin-bottom: 18px;
-    }
-
-    .story-copy p {
-      color: var(--muted);
-      max-width: 60ch;
-    }
-
-    .story-points {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .story-points div {
-      padding-top: 14px;
-      border-top: 1px solid rgba(29, 35, 48, 0.1);
-    }
-
-    .story-points strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--deep);
-    }
-
-    .contact-block {
-      margin: 62px 0 78px;
-      padding: 42px 0 0;
-      border-top: 1px solid rgba(29, 35, 48, 0.12);
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .contact-block h2 { max-width: 10ch; }
-    .contact-block p {
-      color: var(--muted);
-      max-width: 62ch;
-      font-size: 1.04rem;
-    }
-
-    .contact-side {
-      display: grid;
-      gap: 14px;
-      padding: 22px 24px;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 28px;
-      border: 1px solid rgba(36,49,38,0.08);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-side strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--deep);
-    }
-
-    .site-footer {
-      padding: 0 0 36px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 1024px) {
-      .hero-grid,
-      .section-head,
-      .story-grid,
-      .contact-block,
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-shell { min-height: 760px; }
-      .hero-grid { padding: 42px; }
-      .services-list { grid-template-columns: 1fr; gap: 20px; }
-      .service { border-right: 0; padding-right: 24px; }
-      .ribbon-track { grid-template-columns: 1fr 1fr; }
-      .contact-block h2,
-      h2,
-      h1 { max-width: none; }
-    }
-
-    @media (max-width: 720px) {
-      .site-header .wrap {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .hero { padding-top: 18px; }
-      .hero-shell { min-height: 680px; border-radius: 30px; }
-      .hero-grid { padding: 28px 22px; gap: 22px; }
-      .hero-notes { grid-template-columns: 1fr; gap: 12px; }
-      .ribbon-track { grid-template-columns: 1fr; }
-      .story-image { min-height: 470px; }
-      .story-image .primary { inset: 0 48px 74px 0; }
-      .story-image .secondary { width: 160px; height: 185px; }
-      .contact-side { padding: 18px; }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3, .brand-name, .handwritten { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; }
+    h1, h2, h3 { font-weight: 500; }
+    a:focus-visible { outline: 3px solid var(--clay); outline-offset: 5px; }
+    .wrap { width: min(var(--wrap), calc(100% - 64px)); margin-inline: auto; }
+    .skip-link { position: fixed; top: 12px; left: 16px; transform: translateY(-180%); padding: 12px 18px; background: var(--ink); color: white; z-index: 30; }
+    .skip-link:focus { transform: translateY(0); }
+    .site-header { position: sticky; top: 0; z-index: 10; background: rgba(248,244,235,.96); border-bottom: 1px solid var(--line); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 98px; }
+    .brand { display: inline-flex; align-items: center; gap: 13px; flex-shrink: 0; }
+    .brand img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 1px solid #d6ddcc; }
+    .brand-name { display: block; font-size: 1.5rem; line-height: 1.05; }
+    .brand small { display: block; margin-top: 7px; color: var(--muted); font-size: .61rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+    .nav { display: flex; align-items: center; justify-content: flex-end; gap: 25px; font-size: .82rem; }
+    .nav a { padding-block: 10px; }
+    .nav a:hover, .text-link:hover { color: var(--clay); }
+    .nav .nav-contact { border-bottom: 1px solid var(--clay); }
+    .kicker { color: var(--clay); text-transform: uppercase; font-size: .7rem; font-weight: 600; letter-spacing: .17em; line-height: 1.6; }
+    .hero { padding-block: 64px 60px; }
+    .hero-grid { display: grid; grid-template-columns: 1.12fr 1fr; gap: 65px; align-items: center; }
+    .hero h1 { font-size: clamp(3.8rem, 6.4vw, 5.8rem); line-height: .99; letter-spacing: -.045em; margin-top: 23px; }
+    .hero h1 em { color: var(--clay); font-weight: 500; }
+    .hero-copy > p { color: var(--muted); max-width: 43ch; font-size: 1.03rem; margin-top: 27px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 15px 24px; align-items: center; margin-top: 29px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 49px; padding: 12px 23px; border: 1px solid var(--ink); border-radius: 5px; background: var(--ink); color: var(--white); font-size: .81rem; font-weight: 500; transition: background .2s; }
+    .button:hover { background: #3e5643; }
+    .button-light { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+    .button-light:hover { background: var(--paper-deep); }
+    .text-link { font-size: .81rem; padding-block: 10px; border-bottom: 1px solid #b4b8aa; }
+    .hero-location { display: flex; align-items: center; gap: 10px; font-size: .72rem; color: var(--muted); margin-top: 30px; }
+    .hero-location::before { content: ""; width: 7px; height: 7px; background: #8b9876; border-radius: 50%; flex-shrink: 0; }
+    .hero-art { position: relative; padding: 0 28px 32px 0; }
+    .hero-art::before { content: ""; position: absolute; inset: 35px 0 8px 30px; border: 1px solid #c3c8b1; border-radius: 200px 200px 8px 8px; }
+    .hero-photo { position: relative; background: var(--white); padding: 11px 11px 0; border-radius: 200px 200px 5px 5px; box-shadow: 0 15px 40px rgba(61,62,43,.08); }
+    .hero-photo img { width: 100%; height: 500px; object-fit: cover; border-radius: 190px 190px 2px 2px; }
+    .hero-photo figcaption { padding: 13px 4px 15px; color: var(--muted); font-size: .67rem; letter-spacing: .05em; }
+    .hero-note { position: absolute; bottom: 0; right: 0; padding: 14px 25px; background: #e8eadb; color: var(--ink); transform: rotate(-4deg); box-shadow: 0 5px 15px rgba(61,62,43,.05); font-size: 1.5rem; font-style: italic; }
+    .ribbon { border-block: 1px solid var(--line); }
+    .ribbon .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 22px; padding-block: 19px; color: var(--muted); font-size: .73rem; }
+    .ribbon span::before { content: "✳"; color: var(--clay); margin-right: 13px; }
+    .section { padding-block: 90px; }
+    .section-head { display: grid; grid-template-columns: 1.05fr 1fr; align-items: end; gap: 80px; margin-bottom: 37px; }
+    h2 { font-size: clamp(2.6rem, 4vw, 3.8rem); line-height: 1.05; letter-spacing: -.035em; }
+    .section-head h2, .story-copy h2 { margin-top: 13px; }
+    .section-head > p { max-width: 47ch; color: var(--muted); font-size: .92rem; }
+    .experience { background: #eeeee3; }
+    .experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; padding-top: 30px; border-top: 1px solid #ced1c0; }
+    .experience-number { display: block; color: var(--clay); font-size: .7rem; letter-spacing: .1em; margin-bottom: 14px; }
+    h3 { font-size: 1.8rem; line-height: 1.15; }
+    .experience-grid p { color: var(--muted); font-size: .89rem; margin-top: 13px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .service { padding: 31px 27px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,253,248,.6); }
+    .service .kicker { font-size: .64rem; }
+    .service h3 { margin-block: 20px 13px; }
+    .service p { color: var(--muted); font-size: .88rem; }
+    .service-bottom { margin-top: 29px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--clay); font-size: .76rem; }
+    .portfolio { padding-top: 0; }
+    .portfolio-grid { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 25px; align-items: start; }
+    .portfolio-column { display: grid; gap: 29px; }
+    .portfolio-piece { margin: 0; }
+    .portfolio-piece img { width: 100%; object-fit: cover; border-radius: 5px; background: var(--paper-deep); }
+    .portfolio-piece.tall img { aspect-ratio: 1071 / 1498; }
+    .portfolio-piece.portrait img { aspect-ratio: 1 / 1.12; object-position: center; }
+    .portfolio-piece.landscape img { aspect-ratio: 5 / 4; }
+    .portfolio-piece figcaption { padding: 15px 1px 0; }
+    .portfolio-piece h3 { font-size: 1.45rem; }
+    .portfolio-piece p { font-size: .76rem; color: var(--muted); margin-top: 5px; line-height: 1.65; }
+    .story { background: var(--paper-deep); }
+    .story-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 90px; align-items: center; }
+    .story-image { padding: 0 65px 35px 0; position: relative; }
+    .story-primary { width: 100%; aspect-ratio: .78; object-fit: cover; border-radius: 180px 180px 4px 4px; }
+    .story-secondary { position: absolute; right: 0; bottom: 0; width: 40%; aspect-ratio: .83; object-fit: cover; border: 8px solid var(--white); transform: rotate(5deg); box-shadow: 0 12px 24px rgba(61,62,43,.12); }
+    .story-copy p { font-size: .92rem; color: var(--muted); margin-top: 22px; }
+    .story-copy .handwritten { color: var(--clay); font-size: 1.7rem; font-style: italic; margin-top: 24px; }
+    .contact { padding-block: 80px; }
+    .contact-shell { display: grid; grid-template-columns: 1.18fr .82fr; gap: 70px; padding: 55px; background: var(--ink); color: var(--white); border-radius: 8px; }
+    .contact .kicker { color: #e6be9d; }
+    .contact h2 { margin-top: 14px; max-width: 15ch; }
+    .contact-copy > p { margin-top: 24px; color: #e0e5d9; font-size: .92rem; max-width: 43ch; }
+    .contact-side { align-self: center; }
+    .contact-side div + div { margin-top: 27px; padding-top: 25px; border-top: 1px solid #597060; }
+    .contact-side h3 { font-size: 1.5rem; }
+    .contact-side p { color: #e0e5d9; font-size: .82rem; margin-top: 10px; }
+    .site-footer { padding-block: 0 30px; }
+    .footer-inner { border-top: 1px solid var(--line); padding-top: 25px; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .72rem; }
+    .footer-inner a { white-space: nowrap; }
+    @media (min-width: 1400px) { .hero { padding-block: 78px; } }
+    @media (max-width: 1000px) {
+      .nav { gap: 15px; font-size: .75rem; }
+      .hero-grid { gap: 35px; }
+      .hero h1 { font-size: clamp(3.3rem, 6.6vw, 4.9rem); }
+      .hero-photo img { height: 455px; }
+      .section-head, .story-grid { gap: 45px; }
+      .contact-shell { gap: 42px; padding: 42px; }
+      .service { padding: 27px 21px; }
+    }
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 142px; }
+      .wrap { width: calc(100% - 38px); }
+      .header-inner { flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; min-height: 125px; padding-block: 12px; }
+      .brand img { width: 42px; height: 42px; }
+      .brand-name { font-size: 1.3rem; }
+      .brand small { margin-top: 5px; font-size: .55rem; }
+      .nav { width: 100%; gap: 10px 19px; justify-content: flex-start; flex-wrap: wrap; font-size: .71rem; }
+      .nav a { padding-block: 6px; }
+      .hero { padding-block: 41px 44px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero h1 { font-size: clamp(3.4rem, 10.8vw, 4.6rem); max-width: 13ch; margin-top: 18px; }
+      .hero-copy > p { margin-top: 22px; font-size: .95rem; max-width: 46ch; }
+      .hero-location { margin-top: 23px; }
+      .hero-art { max-width: 490px; width: 100%; justify-self: center; padding-right: 20px; }
+      .hero-photo img { height: auto; aspect-ratio: 1 / 1.1; object-position: center 42%; }
+      .hero-note { font-size: 1.35rem; }
+      .ribbon .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 11px 14px; font-size: .66rem; }
+      .ribbon span::before { margin-right: 7px; }
+      .section { padding-block: 58px; }
+      .section-head { grid-template-columns: 1fr; gap: 20px; margin-bottom: 30px; }
+      h2 { font-size: clamp(2.6rem, 8.2vw, 3.4rem); }
+      .section-head > p { max-width: 52ch; }
+      .experience-grid { grid-template-columns: 1fr; gap: 25px; padding-top: 25px; }
+      .experience-grid article + article { border-top: 1px solid #ced1c0; padding-top: 25px; }
+      .experience-number { margin-bottom: 9px; }
+      .services-grid { grid-template-columns: 1fr; gap: 16px; }
+      .service { padding: 28px; }
+      .service h3 { margin-top: 13px; }
+      .service-bottom { margin-top: 20px; }
+      .portfolio { padding-top: 0; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+      .portfolio-piece.tall { grid-column: 1 / -1; }
+      .portfolio-piece.tall img { aspect-ratio: 1.12; object-position: center 43%; }
+      .portfolio-piece h3 { font-size: 1.3rem; }
+      .portfolio-piece p { font-size: .72rem; }
+      .story-grid { grid-template-columns: 1fr; gap: 43px; }
+      .story-image { width: 100%; max-width: 420px; justify-self: center; }
+      .story-copy p { margin-top: 18px; }
+      .contact { padding-block: 50px; }
+      .contact-shell { grid-template-columns: 1fr; padding: 35px 27px; gap: 40px; }
+      .contact-side { border-top: 1px solid #597060; padding-top: 30px; }
+      .footer-inner { flex-direction: column; gap: 12px; padding-top: 20px; }
+    }
+    @media (max-width: 380px) {
+      .nav { gap: 7px 14px; font-size: .67rem; }
+      .hero h1 { font-size: 3.15rem; }
+      .ribbon .wrap { grid-template-columns: 1fr; }
+      .hero-actions { gap: 9px 18px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-piece.tall { grid-column: auto; }
+      .hero-note { font-size: 1.2rem; padding-inline: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="#top"><img class="brand-mark" src="assets/branding/chelsea-whitney-art-logo.jpg" alt="Chelsea Whitney Art logo" /><span class="brand-text">Chelsea Whitney Art<small>rogue valley</small></span></a>
-      <nav class="nav" aria-label="Primary">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Chelsea Whitney Art home">
+        <img src="assets/branding/chelsea-whitney-art-logo.jpg" width="56" height="56" alt="" />
+        <span><span class="brand-name">Chelsea Whitney Art</span><small>Rogue Valley, Oregon</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#experience">The experience</a>
         <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#portfolio">The work</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a class="nav-contact" href="#contact">Work with Chelsea</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-shell">
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <div class="eyebrow">Rogue Valley, Oregon</div>
-              <div class="hero-signature">Natural color, local spirit, and creative work</div>
-              <h1>Photography and art with a softer, more human kind of presence.</h1>
-              <p>
-                Chelsea Whitney Art is rooted in wildlife, macro detail, portrait photography, event coverage, and local creative work inspired by the natural beauty of Southern Oregon. From personal portraits to weddings and meaningful gatherings, every piece is shaped with care, personality, and a strong sense of place.
-              </p>
-              <div class="hero-actions">
-                <a class="button" href="#contact">Get in touch</a>
-                <a class="button-secondary" href="#portfolio">See the work</a>
-              </div>
-            </div>
-
-            <div class="hero-notes">
-              <div>
-                <strong>Nature-led</strong>
-                <span>Birds, pollinators, textures, and the quiet drama of Southern Oregon light.</span>
-              </div>
-              <div>
-                <strong>Personal</strong>
-                <span>Thoughtful, approachable work shaped by the eye of a local artist.</span>
-              </div>
-              <div>
-                <strong>Flexible</strong>
-                <span>Wildlife photography, portraits, weddings, event coverage, digital art, and custom visual work are all part of the offering.</span>
-              </div>
-            </div>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">Photography with a personal touch</div>
+          <h1 id="hero-title">Come as you are.<br /><em>Remember how it felt.</em></h1>
+          <p>A little conversation. Room to be yourself. Chelsea brings warmth and gentle guidance to photography, helping you feel comfortable and making space for real connection and meaningful moments.</p>
+          <div class="hero-actions">
+            <a class="button" href="#experience">Get to know the experience <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#portfolio">Explore the work</a>
           </div>
+          <div class="hero-location">Portraits, weddings &amp; creative work in Southern Oregon</div>
+        </div>
+        <div class="hero-art">
+          <figure class="hero-photo">
+            <img src="assets/images/hawk-pair.jpg" width="1071" height="1498" alt="Two hawks perched close together on a bare branch against a blue sky" fetchpriority="high" />
+            <figcaption>Wildlife photography by Chelsea Whitney Art</figcaption>
+          </figure>
+          <div class="hero-note handwritten">A little closer. A little more feeling.</div>
         </div>
       </div>
     </section>
 
-    <section class="ribbon" aria-label="Creative themes">
-      <div class="wrap ribbon-track">
-        <span>Portrait photography</span>
-        <span>Weddings and events</span>
-        <span>Wildlife and macro</span>
-        <span>Artwork and creative commissions</span>
+    <div class="ribbon" aria-label="Photography and artwork services">
+      <div class="wrap">
+        <span>Portraits &amp; personal photography</span>
+        <span>Weddings &amp; gatherings</span>
+        <span>Wildlife &amp; macro</span>
+        <span>Art &amp; creative commissions</span>
       </div>
-    </section>
+    </div>
 
-    <section id="services">
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Creative services</div>
-            <h2>Creative work with a natural, local perspective.</h2>
+            <div class="kicker">A person behind the camera</div>
+            <h2 id="experience-title">Feeling at ease makes room for feeling.</h2>
           </div>
-          <p>
-            Chelsea Whitney Art offers photography and visual artwork that feels grounded, personal, and connected to the landscapes, gatherings, textures, and quiet moments of the Rogue Valley.
-          </p>
+          <p>You don’t have to arrive knowing how to pose. Chelsea’s strength is the human part: connecting with people, drawing out emotion, and helping create moments that feel genuine.</p>
         </div>
-
-        <div class="services-list">
-          <article class="service">
-            <span class="label">Portraits</span>
-            <h3>Portrait and personal photography</h3>
-            <p>Portrait sessions for individuals, couples, families, artists, and local makers who want images that feel warm, natural, and personal.</p>
+        <div class="experience-grid">
+          <article>
+            <span class="experience-number">01 / CONNECTION</span>
+            <h3>A little conversation</h3>
+            <p>Space to share who you are, what matters to you, and what you hope to remember. The people in the photographs are the heart of the experience.</p>
           </article>
-
-          <article class="service">
-            <span class="label">Events</span>
-            <h3>Weddings and meaningful gatherings</h3>
-            <p>Wedding photography and event coverage for celebrations, community events, and special occasions captured with a calm, thoughtful eye.</p>
+          <article>
+            <span class="experience-number">02 / COMFORT</span>
+            <h3>A gentle helping hand</h3>
+            <p>A personal, encouraging presence behind the camera helps you settle in, find your own rhythm, and feel more like yourself.</p>
           </article>
-
-          <article class="service">
-            <span class="label">Nature + art</span>
-            <h3>Wildlife, macro, and creative work</h3>
-            <p>Wildlife photography, close-up nature studies, digital art, and commissioned visual pieces inspired by detail, atmosphere, and the natural world.</p>
+          <article>
+            <span class="experience-number">03 / FEELING</span>
+            <h3>Room for real moments</h3>
+            <p>The shared laugh, the quiet look, the feeling of being together. Meaningful photographs begin with moments worth being present for.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
+    <section class="section" id="services" aria-labelledby="services-title">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Featured work</div>
-            <h2>A more natural, image-first portfolio direction.</h2>
+            <div class="kicker">Ways to work together</div>
+            <h2 id="services-title">Your people.<br />Your moments.<br />A thoughtful eye.</h2>
           </div>
-          <p>
-            The portfolio brings together wildlife photography, close-up studies, and imaginative digital artwork, while the studio also offers portraits, weddings, and event photography shaped by the same calm eye for detail, mood, and natural beauty.
-          </p>
+          <p>From a personal portrait to a room full of people you love, Chelsea brings care and attention to the occasion. Nature photography and creative artwork are part of that same love of noticing.</p>
         </div>
+        <div class="services-grid">
+          <article class="service">
+            <div class="kicker">Portraits</div>
+            <h3>Photographs that feel like you</h3>
+            <p>Personal photography for individuals, couples, families, artists, and local makers. Warm, natural images, with a real person there to help you feel comfortable in front of the camera.</p>
+            <div class="service-bottom">Personality, connection &amp; everyday life</div>
+          </article>
+          <article class="service">
+            <div class="kicker">Weddings &amp; events</div>
+            <h3>The people who make it matter</h3>
+            <p>Wedding photography and coverage of celebrations, community events, and special gatherings. A thoughtful eye for the emotion, familiar faces, and little moments that make the day yours.</p>
+            <div class="service-bottom">Big occasions &amp; meaningful gatherings</div>
+          </article>
+          <article class="service">
+            <div class="kicker">Nature &amp; art</div>
+            <h3>Wonder in the details</h3>
+            <p>Wildlife photography, macro studies, digital art, and creative commissions. Close attention to light, texture, and the natural world, with room for imagination.</p>
+            <div class="service-bottom">Wildlife, artwork &amp; personal commissions</div>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">A few things worth noticing</div>
+            <h2 id="portfolio-title">A closer look at the work.</h2>
+          </div>
+          <p>This selection brings together Chelsea’s wildlife photography, small wonders from nature, and imaginative digital artwork. Explore the details, the color, and the feeling in each piece.</p>
+        </div>
         <div class="portfolio-grid">
-          <article class="portfolio-piece tall">
-            <img src="assets/images/hawk-pair.jpg" alt="Two hawks perched together" />
-            <div class="note">
-              <strong>Wildlife portraits</strong>
-              <span>Strong subject presence, editorial framing, and a grounded natural mood.</span>
-            </div>
-          </article>
-
+          <figure class="portfolio-piece tall">
+            <img src="assets/images/hawk-pair.jpg" width="1071" height="1498" alt="Two hawks together on a tree branch" loading="lazy" />
+            <figcaption><h3>Wildlife portraits</h3><p>Wildlife photography, with room for character and connection.</p></figcaption>
+          </figure>
           <div class="portfolio-column">
-            <article class="portfolio-piece medium round">
-              <img src="assets/images/ladybug-macro.jpg" alt="Close-up ladybug on a green stem" />
-              <div class="note">
-                <strong>Macro studies</strong>
-                <span>Close, tactile, colorful work with softness, detail, and a quiet sense of wonder.</span>
-              </div>
-            </article>
-            <article class="portfolio-piece short soft">
-              <img src="assets/images/hawk-wire.jpg" alt="Hawk perched on a utility line" />
-              <div class="note">
-                <strong>Everyday wildness</strong>
-                <span>Finding character in ordinary local moments.</span>
-              </div>
-            </article>
+            <figure class="portfolio-piece portrait">
+              <img src="assets/images/ladybug-macro.jpg" width="702" height="1024" alt="Close-up of a ladybug on a green plant stem" loading="lazy" />
+              <figcaption><h3>Macro studies</h3><p>Color, texture, and a closer look at the natural world.</p></figcaption>
+            </figure>
+            <figure class="portfolio-piece landscape">
+              <img src="assets/images/hawk-wire.jpg" width="972" height="1265" alt="Hawk resting on a utility line against a blue sky" loading="lazy" />
+              <figcaption><h3>Everyday wildness</h3><p>A familiar setting. A moment worth noticing.</p></figcaption>
+            </figure>
           </div>
-
           <div class="portfolio-column">
-            <article class="portfolio-piece medium soft">
-              <img src="assets/images/hawk-flower-art.jpg" alt="Stylized hawk on flower composite" />
-              <div class="note">
-                <strong>Digital art</strong>
-                <span>Photography pushed into symbolic, layered visual pieces.</span>
-              </div>
-            </article>
-            <article class="portfolio-piece short round">
-              <img src="assets/images/soaring-wing.jpg" alt="Bird flying in silhouette" />
-              <div class="note">
-                <strong>Movement and mood</strong>
-                <span>Atmosphere matters as much as sharpness here.</span>
-              </div>
-            </article>
+            <figure class="portfolio-piece landscape">
+              <img src="assets/images/hawk-flower-art.jpg" width="3000" height="2400" alt="Digital artwork combining a hawk, a pink flower, and geometric patterns" loading="lazy" />
+              <figcaption><h3>Digital art</h3><p>Photography and digital art brought together.</p></figcaption>
+            </figure>
+            <figure class="portfolio-piece landscape">
+              <img src="assets/images/soaring-wing.jpg" width="3000" height="2400" alt="A bird in flight silhouetted against a blue background with geometric patterns" loading="lazy" />
+              <figcaption><h3>Movement &amp; mood</h3><p>Movement, light, and the feeling of open space.</p></figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section class="section story" id="about" aria-labelledby="about-title">
       <div class="wrap story-grid">
-        <div class="story-image" aria-hidden="true">
-          <div class="primary"><img src="assets/images/frosted-tree.jpg" alt="Snow-covered tree in fog" /></div>
-          <div class="secondary"><img src="assets/images/ladybug-macro.jpg" alt="Ladybug on a green plant stem" /></div>
+        <div class="story-image">
+          <img class="story-primary" src="assets/images/frosted-tree.jpg" width="734" height="1024" alt="A tree covered in frost in soft winter light" loading="lazy" />
+          <img class="story-secondary" src="assets/images/ladybug-macro.jpg" width="702" height="1024" alt="Ladybug resting on a green stem" loading="lazy" />
         </div>
-
         <div class="story-copy">
-          <div class="section-kicker">About Chelsea Whitney Art</div>
-          <div class="quote-line">A local creative presence shaped by Rogue Valley light, texture, wildlife, and feeling.</div>
-          <p>
-            Chelsea Whitney Art is a local creative business centered on photography, artwork, and meaningful visual storytelling. The work is shaped by a love of wildlife, a close attention to detail, and a connection to the landscapes, people, and natural rhythms of Southern Oregon.
-          </p>
-          <p>
-            From portrait sessions and weddings to prints, personal commissions, and creative collaborations, the studio stays rooted in a genuine, artist-led point of view.
-          </p>
-
-          <div class="story-points">
-            <div>
-              <strong>Grounded in Southern Oregon</strong>
-              <span>Medford, Ashland, Jacksonville, and the surrounding Rogue Valley all fit naturally into the story.</span>
-            </div>
-            <div>
-              <strong>Available for a range of projects</strong>
-              <span>From commissioned artwork to portraits, weddings, events, and creative collaborations, the work is designed to stay personal and artist-led.</span>
-            </div>
-            <div>
-              <strong>Focused on meaningful imagery</strong>
-              <span>Wildlife, macro subjects, and atmospheric artwork set the tone for a portfolio that feels calm, expressive, and personal.</span>
-            </div>
-          </div>
+          <div class="kicker">Meet the approach</div>
+          <h2 id="about-title">Photography is personal.<br />So is the experience.</h2>
+          <p>Chelsea Whitney Art brings together photography, artwork, and visual storytelling in the Rogue Valley. The work spans portraits, weddings, events, wildlife, and creative commissions, with care for the people and details that give an image meaning.</p>
+          <p>What Chelsea brings to a session is a warm, human presence. She helps people feel at ease, encourages connection, and makes space for emotion to come through. It’s a personal way of making photographs you can feel connected to.</p>
+          <p>That attention carries into the nature photography and artwork, too: the texture of a winter tree, the color of a tiny visitor, or a quiet moment out in the world.</p>
+          <p class="handwritten">Good company. A thoughtful eye. Something to remember.</p>
         </div>
       </div>
     </section>
 
-    <section class="wrap" id="contact">
-      <div class="contact-block">
-        <div>
-          <div class="section-kicker">Work with Chelsea</div>
-          <h2>Artwork and photography shaped by the Rogue Valley.</h2>
-          <p>
-            Chelsea Whitney Art is available for portraits, weddings, event photography, wildlife and nature photography, creative commissions, and visual artwork with a warm, thoughtful, and local point of view.
-          </p>
-          <div class="hero-actions" style="margin-bottom:0;">
-            <a class="button" href="#top">Back to top</a>
-            <a class="button-secondary" href="#portfolio">View portfolio</a>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-shell">
+        <div class="contact-copy">
+          <div class="kicker">Work with Chelsea</div>
+          <h2 id="contact-title">What would you love to remember?</h2>
+          <p>A person, a celebration, a chapter of life, or an idea taking shape. There’s room for a personal approach, whether it’s photography or a piece of art.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#services">Explore photography &amp; art <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-
-        <aside class="contact-side">
+        <aside class="contact-side" aria-label="Service area and availability">
           <div>
-            <strong>Available for</strong>
-            <span>Portrait photography, weddings, event coverage, wildlife and nature photography, artwork, and creative commissions throughout Southern Oregon.</span>
+            <h3>Here in the Rogue Valley</h3>
+            <p>Based in the Rogue Valley, serving Medford, Ashland, Jacksonville, and surrounding Southern Oregon communities.</p>
           </div>
           <div>
-            <strong>Location</strong>
-            <span>Based in the Rogue Valley, serving Medford, Ashland, Jacksonville, and surrounding communities.</span>
+            <h3>Made with care</h3>
+            <p>Portraits, weddings, event coverage, wildlife and nature photography, digital art, prints, and creative commissions.</p>
           </div>
         </aside>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
-    <div class="wrap">Chelsea Whitney Art, photography, digital art, and visual storytelling in the Rogue Valley, Oregon.</div>
+    <div class="wrap footer-inner">
+      <p>Chelsea Whitney Art · Photography, artwork &amp; connection in Southern Oregon</p>
+      <a href="#top">Back to the top ↑</a>
+    </div>
   </footer>
 </body>
 </html>
